@@ -1,0 +1,23 @@
+name: Exercise 2 Workflow
+
+on: 
+    push: 
+        branches: [main]
+
+env:
+	ARTIFACT_VAR: "my ARTIFACT env var"
+
+jobs:
+    build: 
+		runs-on: ubuntu-latest 
+		
+		steps:
+		- name: Step 1 - Action Chackout
+		- uses: actions/checkout@v2
+			
+		- name: Step 2 - Action Upload Artifact
+		  uses: actions/upload-artifact@v2.2.2
+		  with:
+			name: local-library
+			path: .
+			if-no-files-found: error
