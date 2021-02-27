@@ -5,9 +5,9 @@ name: Node.js Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [ math-mack ]
   pull_request:
-    branches: [ main ]
+    branches: [ maath-mack ]
     
 
 jobs:
